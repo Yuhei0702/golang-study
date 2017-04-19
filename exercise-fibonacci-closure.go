@@ -1,4 +1,3 @@
-
 package main
 
 import "fmt"
@@ -9,14 +8,14 @@ func fibonacci() func() int {
 	return func() int {
 		count++
 		switch count {
-			case 1:
-				return 0
-			case 2:
-				return 1
-			default:
-				sum = n + m
-	    	m = n
-	  		n = sum
+		case 1:
+			return 0
+		case 2:
+			return 1
+		default:
+			sum = n + m
+			m = n
+			n = sum
 		}
 		return sum
 	}
